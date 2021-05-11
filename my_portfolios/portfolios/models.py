@@ -11,7 +11,7 @@ class PersonalData(models.Model):
     upated_at = models.DateField('date updated')
 
     def __str__(self):
-        return self.about_me
+        return self.first_name
 class Projects(models.Model):
     pesonal_data = models.ForeignKey(PersonalData, on_delete=models.CASCADE)
     project_name = models.CharField(max_length=100)
