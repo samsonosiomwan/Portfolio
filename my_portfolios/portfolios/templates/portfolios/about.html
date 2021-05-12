@@ -42,7 +42,9 @@
   <header id="header" class="fixed-top">
     <div class="container-fluid d-flex justify-content-between align-items-center">
 
-      <h1 class="logo me-auto me-lg-0"><a href="index"> Samson</a></h1>
+      <h1 class="logo me-auto me-lg-0"><a href="index">  {% for personal_data in personal_data.all %}
+        {{personal_data.first_name}}{{personal_data.last_name}}.com
+        {% endfor %}</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -53,7 +55,7 @@
           <li><a href="#">Resume</a></li>
           <li><a href="#">Services</a></li>
           <li><a href="portfolio">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -78,14 +80,7 @@
         <div class="section-title">
           <h2>About</h2>
           <p> 
-            I am a quintessential Agile Leadership Expert, a Softeware/Mechanical Engineer, an AI enthusiast, python developer and a serial entrepreneur. 
-            I have a 3-years experience in the civic leadership space as a youth driver and students activist. 
-            On the same footing, I also have a 2 year experience in the public leadership space. 
-            I serve as the President Nigeria Engineering Students Association(NUESA) which created public impact to all engineering students across Nigeria in the year 2015-2017 through several hubs and initiatives for personal development. 
-            I equally serve as a founding member of the Nigerian Society of Engineers National Students Body where i represented Alli University Engineering in my capacity as their president. 
-            I servered as member Studen Union Government Parliament, Ambrose Alli University.
-            I am innovative and driven towards the advancement in technology which explains my interest in Artificial Intelligence. 
-          </p>
+            {% for personal_data in personal_data.all %} {{personal_data.about_me}}{% endfor %}          </p>
         </div>
 
         <div class="row">

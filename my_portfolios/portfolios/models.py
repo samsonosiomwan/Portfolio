@@ -6,15 +6,16 @@ class PersonalData(models.Model):
     first_name = models.CharField(max_length = 200)
     last_name = models.CharField(max_length=200)
     profession = models.CharField(max_length = 200) 
-    about_me = models.CharField(max_length = 510)
+    about_me = models.TextField()
     created_at = models.DateField('date created')
     upated_at = models.DateField('date updated')
 
     def __str__(self):
         return self.first_name
+
 class Projects(models.Model):
     pesonal_data = models.ForeignKey(PersonalData, on_delete=models.CASCADE)
     project_name = models.CharField(max_length=100)
-    about_project = models.CharField(max_length= 500)
+    about_project = models.TextField()
 
 
