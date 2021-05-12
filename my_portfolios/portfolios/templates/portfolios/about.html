@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>About -  samson osiomwan</title>
+  <title>About -  {% for personal_data in personal_data.all %} {{personal_data.first_name}}{{personal_data.last_name}}{% endfor %}</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -52,7 +52,7 @@
           <li><a class="active" href="about">About</a></li>
           <li><a href="#">Resume</a></li>
           <li><a href="#">Services</a></li>
-          <li><a href="#">Portfolio</a></li>
+          <li><a href="portfolio">Portfolio</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

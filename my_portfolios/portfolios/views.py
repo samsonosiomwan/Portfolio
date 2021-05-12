@@ -13,5 +13,8 @@ def index(request):
 def about(request):
     return render(request, 'portfolios/about.html')
 
+def portfolio(request):
+    return render(request, 'portfolios/portfolio.html')
+
 
     
