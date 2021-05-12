@@ -11,10 +11,21 @@ def index(request):
     return render(request,'portfolios/index.html',{'personal_data':personal_datas, 'projects':projects})
 
 def about(request):
-    return render(request, 'portfolios/about.html')
+    personal_datas = PersonalData.objects 
+    projects = Projects.objects
+    return render(request, 'portfolios/about.html', {'personal_data':personal_datas, 'projects':projects})
 
 def portfolio(request):
-    return render(request, 'portfolios/portfolio.html')
+    personal_datas = PersonalData.objects 
+    projects = Projects.objects
+    return render(request, 'portfolios/portfolio.html', {'personal_data':personal_datas, 'projects':projects})
 
+def portfolio_details(request):
+    pass
+
+def contact(request):
+    personal_datas = PersonalData.objects 
+    projects = Projects.objects
+    return render(request, 'portfolios/contact.html', {'personal_data':personal_datas, 'projects':projects})
 
     
