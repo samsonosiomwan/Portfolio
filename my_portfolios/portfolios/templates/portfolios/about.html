@@ -62,8 +62,8 @@
 
       <div class="header-social-links">
         <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.facebook.com/sasioos" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/sami_siom/" class="instagram"><i class="bi bi-instagram"></i></a>
         <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
       </div>
 
@@ -79,8 +79,7 @@
 
         <div class="section-title">
           <h2>About</h2>
-          <p> 
-            {% for personal_data in personal_data.all %} {{personal_data.about_me}}{% endfor %}          </p>
+          <p> {% for personal_data in personal_data.all %} {{personal_data.about_me}}{% endfor %}</p>
         </div>
 
         <div class="row">
